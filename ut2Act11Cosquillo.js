@@ -10,11 +10,13 @@
  * */
 function iniciarPartida(){
     /*Comentario de Manu: Declara variables*/
+    // rafael: Se definen las variables para el seguimiento del turno y el conteo de movimientos.
     let turnoActual = 1;
     const turnosMaximo = 10;
     let cont_movimiento = 0;
 
-    /*Bucle con funcionamiento del juego*/
+    /*Comentario manu: Bucle con funcionamiento del juego*/
+    // rafael: El bucle se ejecuta hasta alcanzar el número máximo de turnos permitido.
     while (turnoActual <= 10) {
         let turno = "";
 
@@ -26,6 +28,7 @@ function iniciarPartida(){
         }
 
         /*Comentario Manu: Depende del turno, saldrá quien mueve*/
+        // rafael: Se muestra en consola quién debe realizar el movimiento en el turno actual.
         if(esTurnoDeBlancas(turno)){
             console.log("Turno "+turnoActual+" → Mueven las ♙ blancas");
         }else{
@@ -37,6 +40,7 @@ function iniciarPartida(){
         if(turnoActual === 10){
             console.log("Se alcanzó el número máximo de turnos. Partida finalizada.");
         }
+        // rafael: Cada tres turnos se imprime un recordatorio para revisar el reloj del juego.
         if(turnoActual % 3 === 0){
             console.log("Recordatorio: revisa el reloj de juego.")
         }
