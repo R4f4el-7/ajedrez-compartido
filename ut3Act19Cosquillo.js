@@ -24,11 +24,10 @@ function caballoValido(origen, destino){
     columna_destino = parseInt(posicion[destino.slice(0,1)]);
     fila_destino = parseInt(destino.slice(1,2));
 
-    if (fila_destino == fila_origen+1){
-
-    }
 }
 peonValido("a1","a2")
+
+
 
 for (i=0; i<5; i++){
     linea = "";
