@@ -14,5 +14,5 @@ console.log(jugadas_numeradas);
 let total_jugadas = arr_jugadas.reduce((acum) => acum + 1, 0);
 
 console.log("Jugadas totales: "+total_jugadas);
-console.log("capturas: "+capturas.length);
+console.log("Capturas: "+capturas.length);
 console.log("Media por jugador: "+total_jugadas/2);

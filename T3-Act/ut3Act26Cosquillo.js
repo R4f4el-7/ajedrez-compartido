@@ -50,7 +50,7 @@ const localMovimiento = getCookie("ultimaPieza");
 localStorage.setItem("PiezaMovimiento", localMovimiento);
 
 //Borrar cookies y localStorage y recargar la página.
-if(confirm("¿Borrar cookies y localstorage?")){
+if(confirm("¿Quieres borrar cookies y localstorage?")){
     deleteCookie("ultimaPieza");
     localStorage.clear();
     alert("Se ha borrado correctamente.");

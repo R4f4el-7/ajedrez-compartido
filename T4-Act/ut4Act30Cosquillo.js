@@ -6,7 +6,7 @@ let arr_jugadas = ["Cd3", "e4", "e5", "Tg6", "Cd3", "e4"];
 let conteo = arr_jugadas.reduce((acc, jugada) => {
     if (acc[jugada]) {
         acc[jugada] = acc[jugada] + 1;
-    } else {
+    }else {
         acc[jugada] = 1;
     }
     return acc;
