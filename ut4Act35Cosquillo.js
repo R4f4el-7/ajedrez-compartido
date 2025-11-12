@@ -23,15 +23,32 @@ const jugadoresTop3 = jugadores.sort((a, b) => b.victorias - a.victorias)
 for (let j = 0; j < 3; j++) {
     console.log(jugadoresTop3[j]);
 }
-//Muestra un resumen en consola con reduce() y filter().
-const victoriasMayor1500 = jugadores.filter(j => j.elo > 1500).reduce((acc,j) => acc + j.victorias, 0);
-const derrotasMayor1500 = jugadores.filter(j => j.elo > 1500).reduce((acc,j) => acc + j.derrotas, 0);
-let tasaVictoriaMayor1500 = ((victoriasMayor1500 * 100) / (victoriasMayor1500+derrotasMayor1500));
+//Guarda el ranking final en localStorage.
+localStorage.setItem("Top3Jugadores", JSON.stringify(jugadoresTop3));
+console.log("Se guarda");
+//Abre una nueva ventana que muestre el ranking con formato HTML dinámico.
+const html = `
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ranking de Jugadores</title>
+<style></style>
+</head>
+<body>
+  <h1>Top 3 Jugadores</h1>
+  <table>
+    <tr><th>Posición</th><th>Nombre</th><th>ELO</th><th>Victorias</th><th>Derrotas</th></tr>
+    <tr><td>1</td><td>${jugadoresTop3[0].nombre}</td><td>${jugadoresTop3[0].elo}</td><td>${jugadoresTop3[0].victorias}</td><td>${jugadoresTop3[0].derrotas}</td></tr>
+    <tr><td>2</td><td>${jugadoresTop3[1].nombre}</td><td>${jugadoresTop3[1].elo}</td><td>${jugadoresTop3[1].victorias}</td><td>${jugadoresTop3[1].derrotas}</td></tr>
+    <tr><td>3</td><td>${jugadoresTop3[2].nombre}</td><td>${jugadoresTop3[2].elo}</td><td>${jugadoresTop3[2].victorias}</td><td>${jugadoresTop3[2].derrotas}</td></tr>
+  </table>
+</body>
+</html>
+`;
 
-console.log("Estadistica de los jugadores con elo mayor a 1500")
-console.log("Victorias totales: "+victoriasMayor1500);
-console.log("Derrotas totales: "+derrotasMayor1500);
-console.log("Tasa de victorias: "+Math.floor(tasaVictoriaMayor1500)+"%");
-
-
-
+// Abre la nueva ventana y escribe el contenido
+const rankingVentana = window.open("", "Ranking", "width=400,height=400");
+rankingVentana.document.open();
+rankingVentana.document.write(html);
+rankingVentana.document.close();
