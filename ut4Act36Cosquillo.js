@@ -34,8 +34,8 @@ let destino = prompt("Posicionde de destino(ej. e4, e5 ...): ");
 columna_origen = posicion[origen.slice(0,1)];
 fila_origen = parseInt(origen.slice(1,2));
 
-columna_destino = posicion[origen.slice(0,1)];
-fila_destino = parseInt(origen.slice(1,2));
+columna_destino = posicion[destino.slice(0,1)];
+fila_destino = parseInt(destino.slice(1,2));
 
 
 moverPieza(tablero, [fila_origen, columna_origen], [fila_destino, columna_destino]);
