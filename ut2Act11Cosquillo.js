@@ -19,7 +19,7 @@ function iniciarPartida(){
     // rafael: El bucle se ejecuta hasta alcanzar el número máximo de turnos permitido.
     while (turnoActual <= 10) {
         let turno = "";
-
+        
         /*Comentario Manu: Asigna a la variable turno si le toca a blancas o a negras*/
         if(turnoActual % 2 === 0){
             turno = "Negras"
