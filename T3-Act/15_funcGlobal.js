@@ -1,3 +1,5 @@
+//isNaN e isFinite no son operadores: son funciones globales de JavaScript
+// que sirven para validar valores numéricos.
 function  validarPosicion(x, y){
     if(isNaN(x) || isNaN(y)){
         console.log("Valor no numerico")
