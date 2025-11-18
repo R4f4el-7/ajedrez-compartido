@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 9 - Validación de Jugadores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Registro de Jugadores - Validación</h2>
+
+  <form id="formJugador">
+    <label>Nombre:</label>
+    <input type="text" id="nombre" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,30}" placeholder="Ej: Magnus Carlsen">
+    <p class="error" id="errorNombre"></p>
+
+    <label>Email:</label>
+    <input type="email" id="correo" required placeholder="Ej: magnus@chess.com">
+    <p class="error" id="errorCorreo"></p>
+
+    <label>ELO:</label>
+    <input type="number" id="elo" required min="800" max="3000" placeholder="Ej: 2850">
+    <p class="error" id="errorElo"></p>
+
+    <button type="submit">Registrar</button>
+  </form>
+
+  <p id="mensajeExito"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
