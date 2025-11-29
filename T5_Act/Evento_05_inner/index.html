@@ -1,0 +1,83 @@
+<!--Muestra los valores:
+
+textContent → texto puro (incluye ocultos).
+
+innerText → solo texto visible.
+
+innerHTML → HTML tal cual.
+Permite cambiar el contenido:
+
+Con textContent (se muestra como texto literal)
+
+Con innerHTML (se interpreta el HTML)-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo innerText, textContent, innerHTML</title>
+
+    <style>
+        #caja span.oculto {
+            display: none;
+        }
+        #caja {
+            border: 1px solid #333;
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 250px;
+        }
+        button {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Demostración de innerText, textContent e innerHTML</h2>
+
+<div id="caja">
+    Texto visible
+    <span class="oculto">Texto oculto</span>
+</div>
+
+<button id="btnTextContent">Ver textContent</button>
+<button id="btnInnerText">Ver innerText</button>
+<button id="btnInnerHTML">Ver innerHTML</button>
+
+<hr>
+
+<button id="btnSetTextContent">Cambiar con textContent</button>
+<button id="btnSetInnerHTML">Cambiar con innerHTML</button>
+
+<script>
+    const caja = document.getElementById("caja");
+
+    // Mostrar valores
+    document.getElementById("btnTextContent").addEventListener("click", () => {
+        console.log("textContent:", caja.textContent);
+        alert("textContent:\n" + caja.textContent);
+    });
+
+    document.getElementById("btnInnerText").addEventListener("click", () => {
+        console.log("innerText:", caja.innerText);
+        alert("innerText:\n" + caja.innerText);
+    });
+
+    document.getElementById("btnInnerHTML").addEventListener("click", () => {
+        console.log("innerHTML:", caja.innerHTML);
+        alert("innerHTML:\n" + caja.innerHTML);
+    });
+
+
+    // Modificar valores
+    document.getElementById("btnSetTextContent").addEventListener("click", () => {
+        caja.textContent = "<b>Esto es texto literal, NO HTML</b>";
+    });
+
+    document.getElementById("btnSetInnerHTML").addEventListener("click", () => {
+        caja.innerHTML = "<b>Ahora esto SÍ es HTML</b> <i>interpretado</i>";
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px;
+        }
+
+        td {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #333;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        /* Colores tipo ajedrez */
+        .blanca {
+            background-color: #f0d9b5;
+        }
+        .negra {
+            background-color: #b58863;
+        }
+
+        /* Clase que se activa al hacer clic */
+        .seleccionada {
+            outline: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+<h1 id="titulo">Hello World</h1>
+<p class="item">A</p>
+<p class="item">B</p>
+<p class="item">C</p>
+
+<table>
+    <!-- Generamos un tablero 8x8 -->
+    <!-- Fila 1 -->
+    <tr>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+    </tr>
+
+    <!-- Fila 2 -->
+    <tr>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+    </tr>
+
+    <!-- Repetimos el patrón para todas las filas... -->
+    <tr>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+    </tr>
+
+    <tr>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+    </tr>
+
+    <tr>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+    </tr>
+
+    <tr>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+    </tr>
+
+    <tr>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+    </tr>
+
+    <tr>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+        <td class="negra"></td>
+        <td class="blanca"></td>
+    </tr>
+</table>
+<script src="1_querySelectorAll.js"></script>
+</body>
+</html>

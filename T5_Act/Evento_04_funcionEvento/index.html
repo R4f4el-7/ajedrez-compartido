@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tablero</title>
+
+    <style>
+        #tablero {
+            display: grid;
+            grid-template-columns: repeat(5, 50px);
+            gap: 5px;
+            margin: 20px;
+        }
+
+        .casilla {
+            width: 50px;
+            height: 50px;
+            background-color: lightgray;
+            border: 1px solid #444;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="tablero">
+    <!-- Casillas de ejemplo -->
+    <div class="casilla" data-pos="1"></div>
+    <div class="casilla" data-pos="2"></div>
+    <div class="casilla" data-pos="3"></div>
+    <div class="casilla" data-pos="4"></div>
+    <div class="casilla" data-pos="5"></div>
+    <div class="casilla" data-pos="6"></div>
+    <div class="casilla" data-pos="7"></div>
+    <div class="casilla" data-pos="8"></div>
+    <div class="casilla" data-pos="9"></div>
+    <div class="casilla" data-pos="10"></div>
+</div>
+
+<script src="funciones_Eventos.js"></script>
+</body>
+</html>
